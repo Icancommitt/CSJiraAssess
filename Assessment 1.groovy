@@ -4,14 +4,14 @@ import com.atlassian.jira.web.bean.PagerFilter
 import com.atlassian.jira.bc.issue.search.SearchService
 
 // Define the custom field name you want to count
-def customFieldName = &quot;Channel&quot; //replace with your own custom field name
+def customFieldName = "Channel" //replace with your own custom field name
 
 // Define variables to get currently logged in user and underlying searchservice for JQL
 def user = ComponentAccessor.jiraAuthenticationContext.loggedInUser
 def searchService = ComponentAccessor.getComponent(SearchService)
 
 // Create a JQL query to search for all issues that have the custom field set
-def jqlQuery = &quot;Channel is not EMPTY&quot; //replace with your own customfield and query as needed
+def jqlQuery = "Channel is not EMPTY" //replace with your own customfield and query as needed
 
 // Parse the JQL query
 def jqlQueryParser = ComponentAccessor.getComponent(JqlQueryParser)
@@ -24,5 +24,5 @@ def searchResults = searchService.search(user, query, PagerFilter.getUnlimitedFi
 def totalUsageCountSys = searchResults.total
 
 // Print the result (will show in both Result and Logs Section)
-log.warn(&quot;Total usage count of custom field &#39;$customFieldName&#39;: $totalUsageCountSys&quot;)
-return &quot;Total usage count of customfield &quot; + customFieldName+ &quot; across the system is &quot; + totalUsageCountSys
+log.warn("Total usage count of custom field '$customFieldName': $totalUsageCountSys")
+return "Total usage count of customfield " + customFieldName+ " across the system is " + totalUsageCountSys
