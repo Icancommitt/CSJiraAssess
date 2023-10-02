@@ -1,3 +1,4 @@
+//import needed packages
 import com.atlassian.jira.component.ComponentAccessor
 import com.atlassian.jira.jql.parser.JqlQueryParser
 import com.atlassian.jira.web.bean.PagerFilter
