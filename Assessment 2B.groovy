@@ -1,4 +1,4 @@
-//import needed methods
+//import needed packages
 import com.atlassian.jira.component.ComponentAccessor
 import com.atlassian.jira.bc.issue.search.SearchService
 import com.atlassian.query.Query
