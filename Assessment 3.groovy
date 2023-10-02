@@ -1,3 +1,4 @@
+//import needed packages
 import com.atlassian.jira.issue.MutableIssue
 import com.atlassian.jira.issue.IssueManager
 import com.atlassian.jira.issue.Issue
